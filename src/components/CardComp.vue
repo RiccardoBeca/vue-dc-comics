@@ -26,8 +26,10 @@ div{
 .img-container{
   height:150px;
   width: 150px;
-  overflow: hidden;
- 
+  overflow:hidden;
+  img{
+    width: 100%;
+  }
 }
 
 

@@ -29,7 +29,8 @@
     </div>
     <div class="footer-mid">
       <div class="w-70">
-        <div class="left-col">
+        <div>
+             <div class="left-col">
           <ul>
             <h2>DC COMICS</h2>
             <li><a href="">Characters</a></li>
@@ -72,6 +73,8 @@
             <li><a href="">DC Power Visa</a></li>
           </ul>
         </div>
+        </div>
+     
         <div class="bg-logo">
           <img src="../assets/img/dc-logo-bg.png" alt="Footer-bg">
         </div>
@@ -137,13 +140,19 @@ export default {
 }
 // FOOTER MID
 .footer-mid{
+  div{
+    display: flex;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 30px;  
   overflow: hidden;
   background-image: url(../assets/img/footer-bg.jpg);
   background-size: cover;
+  .w-70{
+    justify-content: space-between;
+  }
   ul{
     list-style: none;
     h2{
@@ -177,12 +186,10 @@ export default {
   }
   .bg-logo{
     display: flex;
-    height: 100px;
+    // padding-left: 350px;
   }
-  img{
-    height: 500px;
-    padding-left: 350px;
-  }
+  // img{
+  // }
 }
 
 // FOOTER BOTTOM
