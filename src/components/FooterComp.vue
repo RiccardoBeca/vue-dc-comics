@@ -29,7 +29,7 @@
     </div>
     <div class="footer-mid">
       <div class="w-70">
-        <div>
+        <div class="list-container">
              <div class="left-col">
           <ul>
             <h2>DC COMICS</h2>
@@ -140,13 +140,14 @@ export default {
 }
 // FOOTER MID
 .footer-mid{
-  div{
+  .list-container{
     display: flex;
+    padding-top: 100px;
   }
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;  
+  height: 450px;
   overflow: hidden;
   background-image: url(../assets/img/footer-bg.jpg);
   background-size: cover;
@@ -154,6 +155,7 @@ export default {
     justify-content: space-between;
   }
   ul{
+    padding-right: 70px;
     list-style: none;
     h2{
       color: white;
@@ -174,7 +176,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 30px;
     ul:last-of-type{
       margin-top: 30px;
 
@@ -182,11 +183,9 @@ export default {
   }
   .mid-col{
     display: flex;
-    margin-right: 30px;
   }
   .bg-logo{
     display: flex;
-    // padding-left: 350px;
   }
   // img{
   // }

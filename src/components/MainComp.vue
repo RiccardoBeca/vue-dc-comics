@@ -2,12 +2,13 @@
   <main>
     <div class="jumbotron"></div>
      <div class="prova">
-       <div class="w-70 cards-container">
+        <div class="w-70 cards-container">
           <CardComp
            v-for="(book, index) in booksList" :key="`book${index}`"
            :thumb="book.thumb"
            :series="book.series"
-          />
+          />  
+          <button><a href="#">LOAD MORE</a></button>
         </div>
     </div>
     
@@ -33,7 +34,7 @@ export default {
 @import '../assets/style/_general.scss';
 @import '../assets/style/_utils.scss';
 
-main{
+
 
  .prova{
     display: flex;
@@ -42,14 +43,32 @@ main{
     min-height: 100px;
     background-color: rgb(28, 28, 28);
     padding: 40px;
-  .cards-container{
-    flex-wrap: wrap;
-  }
   } 
+  .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    button{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: none;
+    border: 2px solid $project-color;
+    padding: 5px 40px;
+    background-color: $project-color;
+    a{
+      font-size: 17px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+  }
   .jumbotron{
     height: 400px;
     background-image: url(../assets/img/jumbotron.jpg);
   }
-}
+
+
 
 </style>

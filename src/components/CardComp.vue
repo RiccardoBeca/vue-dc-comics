@@ -3,7 +3,7 @@
     <div class="img-container">
      <img :src="thumb" :alt="series">
     </div>
-    <h3>{{series}}</h3>
+    <p>{{series}}</p>
   </div>
 </template>
 
@@ -20,8 +20,15 @@ export default {
 <style lang="scss" scoped>
 
 div{
-  flex-basis: 16.6%;
- 
+  width: calc(100% / 6);
+  padding-bottom: 50px;
+}
+
+p{
+  font-size: .75rem;
+  padding-top: 15px;
+  color: white;
+  text-transform: uppercase;
 }
 .img-container{
   height:150px;
