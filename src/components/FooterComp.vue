@@ -142,6 +142,8 @@ export default {
   align-items: center;
   padding: 30px;
   overflow: hidden;
+  background-image: url(../assets/img/footer-bg.jpg);
+  background-size: cover;
   ul{
     list-style: none;
     h2{
@@ -159,7 +161,6 @@ export default {
       
     }
   }
-  background-image: url(../assets/img/footer-bg.jpg);
   .left-col{
     display: flex;
     flex-direction: column;

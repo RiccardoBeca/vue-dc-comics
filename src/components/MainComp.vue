@@ -1,15 +1,30 @@
 <template>
   <main>
-    <div class="w-70">
-     <h2>-->Content goes here>--</h2>
+    <div class="jumbotron"></div>
+     <div class="prova">
+       <div class="w-70 cards-container">
+          <CardComp
+           v-for="(book, index) in booksList" :key="`book${index}`"
+           :thumb="book.thumb"
+           :series="book.series"
+          />
+        </div>
     </div>
+    
   </main>
 </template>
 
 <script>
+import CardComp from "./CardComp.vue";
+import booksList from "../assets/data/booksLists";
 export default {
-  name:"MainComp"
-
+    name: "MainComp",
+    components: { CardComp },
+    data() {
+        return {
+          booksList
+        }
+    }
 }
 </script>
 
@@ -19,15 +34,21 @@ export default {
 @import '../assets/style/_utils.scss';
 
 main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100px;
-  background-color: black;
-  h2{
+
+ .prova{
     display: flex;
-    justify-content: flex-start;
-    color: white;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background-color: rgb(28, 28, 28);
+    padding: 40px;
+  .cards-container{
+    flex-wrap: wrap;
+  }
+  } 
+  .jumbotron{
+    height: 400px;
+    background-image: url(../assets/img/jumbotron.jpg);
   }
 }
 
