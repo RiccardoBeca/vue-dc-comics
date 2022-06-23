@@ -6,9 +6,9 @@
       </div>
       <nav>
         <ul>
-        <li v-for="(item, index) in itemsList" :key="`nav-${index}`">
-        <a :class="{'active':item.isActive}" :href="item.href">{{item.name}}</a></li>
-      </ul>
+          <li v-for="(item, index) in itemsList" :key="`nav-${index}`">
+          <a @click="!item.isActive" :class="{'active':item.isActive}" :href="item.href">{{item.name}}</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -73,7 +73,8 @@ export default {
         
       ]
     }
-  }
+  },
+  
 }
 </script>
 
